@@ -1,186 +1,157 @@
-# Systematic Review Protocol (PRISMA-P 2015 + PRISMA 2020 alignment)
-
-**Title:** From Microservices to Modular Monoliths: A Systematic Review of
-Architectural Consolidation Patterns, Motivations, and Outcomes (2020-2026)
-
-**Version:** 1.0
-**Date:** 2026-03-23
-**Registered at:** OSF Registries (DOI placeholder: 10.17605/OSF.IO/XXXXX)
-**Reporting guideline followed:** PRISMA 2020 (Page et al., BMJ 2021;372:n71)
-
-This protocol follows the PRISMA-P 2015 reporting checklist for systematic
-review protocols (Moher et al., Syst Rev 2015;4:1).
-
-## 1. Administrative information
-
-### 1.1 Title
-See above.
-
-### 1.2 Registration
-OSF Registries, DOI to be assigned at registration.
-
-### 1.3 Authors
-[Author list with affiliations and contributions]
-
-### 1.4 Amendments
-None as of v1.0. Future amendments will be documented in the decision log
-with justification, date, and impact on the review.
-
-### 1.5 Support
-[Funding source]
-
-## 2. Introduction
-
-### 2.1 Rationale (PRISMA-P item 6a)
-
-Microservices architecture dominated software system design from 2014 through
-the early 2020s, promising scalability, organizational autonomy, and
-deployment independence. Starting around 2020 and accelerating after several
-high-profile industry cases (Amazon Prime Video's 2023 consolidation being
-widely cited), organizations began reporting that microservices introduced
-operational complexity, latency, and cost overheads that outweighed benefits
-for many applications. The term "modular monolith" emerged to describe a
-middle-ground architecture retaining modularity benefits without distributed-
-system overheads.
-
-Despite substantial industry discussion, no rigorous systematic synthesis of
-peer-reviewed empirical studies on this consolidation trend has been
-conducted. Existing reviews focus on decomposition (monolith to microservices)
-rather than the reverse trajectory.
-
-### 2.2 Objectives (PRISMA-P item 6b)
-
-To systematically synthesize peer-reviewed empirical literature on
-microservices-to-modular-monolith consolidation in order to:
-1. Identify motivations and drivers for consolidation.
-2. Catalog consolidation patterns, decision frameworks, and strategies.
-3. Characterize reported outcomes and evaluation approaches.
-4. Identify open challenges and research gaps.
-
-## 3. Methods
-
-### 3.1 Eligibility criteria (PRISMA-P item 8 / PRISMA 2020 item 5)
+### 3.1 Eligibility criteria
 
 **Inclusion criteria:**
-- Peer-reviewed journal articles or peer-reviewed conference papers at
-  CORE A* or A venues
-- Published between January 2020 and June 2026
-- Written in English
-- Reports an empirical study (case study, multi-case study, experiment,
-  survey, or mining study) on at least one documented instance of
-  microservices-to-modular-monolith consolidation
-- Provides sufficient detail about motivations, process, or outcomes
+
+- Peer-reviewed journal articles or peer-reviewed conference papers.
+- Published from 1 January 2018 through the final search date in 2026: **[Final search date to be recorded]**.
+- Written in English.
+- Addresses data consistency across microservices through an identifiable pattern, architectural approach, or coordination mechanism.
+- Provides sufficient methodological or technical detail about at least one of the following: the pattern and its consistency guarantees; factors influencing selection; evaluation methods and reported trade-offs; or implementation challenges and research gaps.
+
+Eligibility will not require empirical evaluation if a primary study otherwise meets these criteria. Whether and how a proposed pattern is evaluated will be extracted and considered in the synthesis.
 
 **Exclusion criteria:**
-- Surveys, reviews, mappings, position papers, opinion pieces
-- Industry whitepapers, blog posts, technical reports, theses
-- Papers focused on monolith-to-microservices decomposition without
-  documenting subsequent consolidation
-- Short papers under 4 pages, extended abstracts, posters
-- Papers that only compare architectural styles conceptually without
-  empirical cases
-- Papers with insufficient methodological detail
 
-### 3.2 Information sources (PRISMA-P item 9 / PRISMA 2020 item 6)
+- Surveys, systematic reviews, mapping studies, position papers, and opinion pieces.
+- Industry whitepapers, blog posts, technical reports, theses, and non-peer-reviewed preprints.
+- Papers addressing data consistency solely within a single service or database, without a connection to consistency across microservices.
+- Papers discussing microservices without sufficient detail about data consistency patterns or mechanisms.
+- Short papers under four pages, extended abstracts, and posters.
+- Papers with insufficient methodological or technical detail to address any research question.
 
-Six bibliographic databases will be searched on a single date:
+### 3.2 Information sources
+
+Five bibliographic sources will be searched:
 
 1. ACM Digital Library
 2. IEEE Xplore
 3. Scopus
-4. Web of Science Core Collection
-5. ScienceDirect (Elsevier)
-6. SpringerLink
+4. ScienceDirect (Elsevier)
+5. SpringerLink
 
-### 3.3 Search strategy (PRISMA-P item 10 / PRISMA 2020 item 7)
+The search date, query, filters, and number of retrieved records will be recorded for each source. The final search date will define the publication cutoff in 2026.
 
-A canonical Boolean search string was developed iteratively with the
-information specialist and pilot-tested. The string targets three concept
-blocks combined with AND:
+### 3.3 Search strategy
 
-- Block 1: microservices and related decomposition terminology
-- Block 2: consolidation, merging, or modular monolith terminology
-- Block 3: empirical study terminology (case study, experience, migration,
-  refactoring)
+The search strategy will target two concept blocks combined with AND:
 
-The full canonical string is in `02-searches/search-string-canonical.txt`.
-Database-specific adaptations are in dated files in the same folder.
+- **Block 1:** Microservices terminology.
+- **Block 2:** Data consistency terminology and relevant pattern or coordination terminology.
 
-The search was peer-reviewed by a second information specialist using the
-PRESS 2015 checklist (McGowan et al., J Clin Epidemiol 2016;75:40-46)
-before execution. PRESS comments are documented in
-`02-searches/press-peer-review.md`.
+The exact Boolean string and any named-pattern terms remain to be finalized. The canonical string will be stored in `02-searches/search-string-canonical.txt`, with source-specific adaptations in dated files in the same folder. Search fields and supported syntax will be documented for each source.
 
-### 3.4 Study records (PRISMA-P item 11 / PRISMA 2020 item 8)
+The search will support identifying patterns broadly so that the most frequently reported ones can be established from the included studies. It will not require selection factors, evaluation outcomes, or research gaps to appear in the search terms for every retrieved paper.
 
-**Data management:** Records will be exported from each database in BibTeX
-or RIS format and imported to Rayyan for deduplication and screening.
+### 3.4 Study records
 
-**Selection process:** Two reviewers (R1, R2) will independently screen all
-records at title/abstract and full-text stages with reviewer blinding
-enabled. Cohen's kappa will be calculated for both stages. Disagreements
-will be resolved through discussion; unresolved disagreements adjudicated
-by the guarantor.
+**Data management:** Records will be exported from each source in BibTeX or RIS format and deduplicated. Source provenance and screening decisions will be retained to support the reporting of study selection.
 
-**Data collection process:** Two reviewers will independently extract data
-from all included studies into a shared structured form.
+**Selection process:** Two reviewers (Zain Haider and Ashok Kumar) will independently screen records at the title/abstract and full-text stages. Disagreements will be resolved through discussion. Reasons for exclusion at the full-text stage will be recorded.
 
-### 3.5 Data items (PRISMA-P item 12 / PRISMA 2020 item 10)
+**Data collection process:** Two reviewers will independently extract data from all included studies into a shared structured form. Differences will be resolved through discussion. Information that a study does not report will be marked as “not reported.”
 
-The data extraction form captures: bibliographic data, study design, system
-characteristics (domain, team size, codebase size, number of microservices
-before/after), consolidation motivations, consolidation strategy, tooling
-used, reported outcomes (quality attributes, cost, productivity), and
-limitations.
+### 3.5 Data items
 
-### 3.6 Outcomes and prioritization (PRISMA-P item 13 / PRISMA 2020 item 9)
+The extraction form will capture:
 
-Primary outcomes:
-- Reported motivations/drivers for consolidation (RQ1)
-- Reported strategies and patterns (RQ2)
-- Reported post-consolidation outcomes (RQ3)
+- **Bibliographic information:** Title, authors, publication year, venue, and DOI or other identifier.
+- **Study characteristics:** Study type, objectives, application domain, system context, and evaluation setting, where reported.
+- **Patterns and guarantees (RQ1):** Pattern names, definitions, mechanisms, combinations with other patterns, stated consistency guarantees, assumptions, and conditions under which guarantees apply. Stated guarantees will be distinguished from guarantees supported by evaluation or formal analysis.
+- **Selection factors (RQ2):** Reported technical, organizational, and economic reasons for selecting or rejecting a pattern, including context and alternatives considered.
+- **Evaluation and trade-offs (RQ3):** Evaluation method, implementation or prototype, workload, system scale, comparison baseline, metrics, measurement conditions, and reported results concerning consistency, performance, availability, scalability, and operational complexity.
+- **Challenges and gaps (RQ4):** Reported implementation difficulties, limitations, threats to validity, unresolved challenges, and proposed future work.
 
-Secondary outcomes:
-- Tooling and automation used
-- Team and organizational structure changes
-- Time and effort required
+Pattern names and terminology will be retained as reported. Where different terms are grouped under a common category, the grouping and its justification will be documented. Research gaps explicitly reported by authors will be distinguished from gaps identified through the review synthesis.
 
-### 3.7 Risk of bias (PRISMA-P item 14 / PRISMA 2020 item 11)
+### 3.6 Outcomes and prioritization
 
-A custom risk of bias assessment instrument adapted for empirical software
-engineering case studies will be applied to each included study by two
-independent reviewers. The instrument is described in
-`06-risk-of-bias/rob-instrument.md`.
+Primary synthesis outputs, mapped to the research questions, will be:
 
-### 3.8 Data synthesis (PRISMA-P item 15 / PRISMA 2020 item 13)
+- A catalogue of data consistency patterns and their reported guarantees, including their frequency across included studies (RQ1).
+- A classification of technical, organizational, and economic selection factors (RQ2).
+- A synthesis of evaluation methods, metrics, benefits, limitations, and trade-offs (RQ3).
+- A synthesis of implementation challenges and research gaps (RQ4).
 
-Narrative synthesis is planned. Quantitative synthesis (meta-analysis) is
-**not** planned because primary studies use heterogeneous system sizes,
-measurement approaches, and outcome definitions, making numerical pooling
-inappropriate.
+Frequency will be reported as the number of included studies addressing each pattern. A study addressing multiple patterns may contribute to more than one category. Counts will describe the reviewed evidence base and will not establish that a pattern is superior or more widely adopted in practice.
 
-Synthesis will be organized by research question with thematic coding for
-qualitative data on motivations and challenges.
+### 3.7 Quality and risk-of-bias assessment
 
-### 3.9 Meta-bias and certainty (PRISMA 2020 items 14, 15)
+A quality/risk-of-bias assessment will be applied to each included study by two independent reviewers. Differences will be resolved through discussion. The instrument and its application rules will be described in `06-risk-of-bias/rob-instrument.md`.
 
-Reporting bias will be assessed by examining whether studies report
-negative results (failed consolidations), by checking alignment between
-stated research questions and reported outcomes, and by looking for
-publication patterns suggesting positive-result bias.
+**Pending specification:** The assessment questions, scoring rules, and any consequences for study inclusion or synthesis have not yet been specified. These details must be documented before the assessment is applied.
 
-Certainty in the synthesis will be discussed narratively, considering
-risk of bias, consistency, directness, and precision of evidence across
-included studies.
+### 3.8 Data synthesis
+
+Narrative synthesis is planned, organized by research question (RQ1–RQ4), with thematic coding for qualitative data on patterns, selection factors, trade-offs, challenges, and research gaps.
+
+Descriptive counts will summarize the frequency of patterns within the included literature. The synthesis will give particular attention to the most frequently reported patterns while retaining other eligible patterns in the evidence catalogue.
+
+Reported guarantees and outcomes will be interpreted alongside study context, assumptions, evaluation design, and quality assessment. Studies proposing an approach without evaluation will be distinguished from studies providing evaluation evidence. Missing organizational or economic evidence will be reported as missing rather than inferred from technical results.
+
+Quantitative synthesis through meta-analysis is not planned because the studies are expected to differ in patterns, consistency guarantees, system scale, workloads, metrics, and evaluation methods. Quantitative results will be summarized with their measurement context.
+
+### 3.9 Meta-bias and certainty
+
+Potential reporting bias will be considered by examining whether studies report negative or null results and limitations, and by comparing stated aims with reported outcomes. Limitations arising from the selected publication types, language, sources, and publication period will be discussed.
+
+Confidence in the synthesis will be discussed narratively, considering study quality, consistency of findings, relevance to the review questions, and the amount and precision of supporting evidence. No formal certainty-grading framework has been specified.
+
+### 3.1 Eligibility criteria (PRISMA-P item 8 / PRISMA 2020 item 5)
+
+**Inclusion criteria:**
+
+- **IC1 — Publication type:** Peer-reviewed primary research published in a journal or conference proceedings, presenting an original data consistency approach, implementation, analysis, or evaluation. Workshop papers qualify when peer reviewed, published in proceedings, and meeting all other criteria.
+
+- **IC2 — Publication period:** First formal publication of the report, including an online-first journal version, falls between 1 January 2018 and the final search date in 2026. The actual cutoff date will be recorded.
+
+- **IC3 — Language and length:** Full text is in English and contains at least four pages of main article content, excluding reference-only pages and supplementary material.
+
+- **IC4 — Microservice context:** Explicitly studies data consistency in microservices or concretely applies the proposed approach to a microservice system. Generic distributed-system or service-oriented approaches qualify only when a worked microservice application is provided. Incidental mentions or claims of potential applicability are insufficient.
+
+- **IC5 — Data consistency focus:** Addresses maintaining, coordinating, restoring, or reasoning about data consistency across microservice boundaries. Relevant concerns include distributed transactions, cross-service data updates, replicated data, and consistency of service-owned read models. The approach must have an explicit connection to data consistency.
+
+- **IC6 — Relevance to the research questions:** Provides extractable information about at least one of the following:
+  - A data consistency pattern or mechanism and its intended guarantees or behaviour (RQ1).
+  - Technical, organizational, or economic factors influencing pattern selection (RQ2).
+  - Evaluation methods, benefits, limitations, or trade-offs concerning consistency, performance, availability, scalability, or operational complexity (RQ3).
+  - Implementation or evaluation challenges and research gaps (RQ4).
+
+- **IC7 — Assessable technical detail:** The accessible full text identifies the microservice context, consistency concern, and relevant pattern or mechanism in sufficient detail for extraction. A study need not use the word “pattern” if its mechanism is identifiable. Empirical evaluation, formal proof, industrial deployment, public artifacts, and answers to every RQ are not mandatory.
+
+**Exclusion criteria:**
+
+- **EC1 — Secondary or non-research contributions:** Surveys, systematic reviews, mapping studies, tutorials, and position or opinion papers without an eligible original research contribution. Secondary studies may inform the background but will not enter the primary-study synthesis.
+
+- **EC2 — Ineligible publication type:** Non-peer-reviewed preprints, whitepapers, blogs, technical reports, theses, extended abstracts, posters, and other publications failing IC1.
+
+- **EC3 — Date, language, or length:** Reports outside the specified publication window, non-English full texts, or reports below the minimum main-text length.
+
+- **EC4 — Insufficient microservice context:** Generic database, cloud, distributed-system, or service-oriented studies without the concrete microservice context required by IC4.
+
+- **EC5 — No cross-service consistency concern:** Studies addressing only internal single-service transactions, database internals, deployment, resource allocation, or other concerns without a connection to data consistency across microservices.
+
+- **EC6 — Pattern terminology without relevant substance:** Papers mentioning consistency or named approaches only incidentally. Studies of Saga, CQRS, event sourcing, messaging, or similar approaches are excluded when they provide no substantive connection to data consistency. Naming a pattern alone does not establish eligibility.
+
+- **EC7 — Insufficient extractable detail:** Full texts that do not provide enough technical or methodological information to establish the microservice context, consistency concern, and relevant approach, or to extract evidence for any RQ. Missing benchmarks, numerical results, formal proofs, tool versions, or public artifacts alone are not grounds for exclusion.
+
+**Application rules:**
+
+All inclusion criteria must be met; meeting any exclusion criterion results in exclusion. Studies need to address at least one RQ, rather than all four. Uncertain title/abstract records will proceed to full-text screening.
+
+Eligibility will not depend on a pattern being considered common beforehand. The most commonly reported patterns will be identified from their frequency across included studies; less frequently reported eligible patterns will remain in the evidence catalogue.
+
+Consistency models, such as eventual or strong consistency, will be distinguished from the patterns and mechanisms used to achieve them. Proposed guarantees will be distinguished from guarantees supported by formal analysis or empirical evaluation. Unevaluated proposals may be included but will not be treated as evidence of demonstrated effectiveness.
+
+Duplicate records will be removed before screening. Related reports of one underlying study will be linked, with the most complete report supplying the main evidence and unique information retained from companion reports. Multiple reports of the same study will not be counted as independent studies when determining pattern frequency.
+
+Unretrievable reports will be recorded separately from assessed full-text exclusions. Full-text exclusion reasons and reviewer disagreements will be documented; disagreements will be resolved through discussion.
 
 ## 4. Reporting
 
-The completed review will be reported strictly per PRISMA 2020 with the
-27-item checklist completed and a PRISMA 2020 flow diagram included.
-Target venue: Empirical Software Engineering (Springer) or IEEE Software.
+The completed review will be reported using the applicable PRISMA 2020 checklist items, with a completed checklist and a PRISMA 2020 flow diagram. Non-applicable items will be identified and explained. Findings will be organized around RQ1–RQ4. This review is prepared as a coursework assignment.
 
 ## 5. Replication package
 
-A replication package containing search strings, screening logs, extraction
-data, risk of bias assessments, and the completed PRISMA checklist will be
-deposited on Zenodo with a DOI before manuscript submission.
+A replication package containing search strings, search dates and filters, screening logs, full-text exclusion reasons, extraction data, quality/risk-of-bias assessments, and the completed PRISMA checklist will be compiled in `09-supplementary/`.
+
+Protocol amendments and substantive methodological decisions will be recorded in `00-admin/decision-log.md`. File paths in this protocol identify planned storage locations; they do not indicate that the referenced files or activities already exist.

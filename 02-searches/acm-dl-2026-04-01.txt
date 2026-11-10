@@ -1,14 +1,35 @@
 ACM Digital Library Advanced Search
 Query field: Abstract
 
-[Abstract: microservices OR Abstract: microservice OR Abstract: "service-oriented architecture"]
+(
+  microservice OR microservices
+  OR "micro-service" OR "micro-services"
+)
 AND
-[Abstract: "modular monolith" OR Abstract: modulith OR Abstract: consolidation
- OR Abstract: "service merging" OR Abstract: "architectural refactoring"]
+(
+  "data consistency"
+  OR "transactional consistency"
+  OR "eventual consistency"
+  OR "strong consistency"
+  OR "causal consistency"
+  OR "distributed transaction"
+  OR "distributed transactions"
+  OR "data synchronization"
+  OR "data synchronisation"
+)
 AND
-[Abstract: "case study" OR Abstract: empirical OR Abstract: "experience report"
- OR Abstract: migration OR Abstract: refactoring]
+(
+  pattern OR patterns
+  OR approach OR approaches
+  OR strategy OR strategies
+  OR mechanism OR mechanisms
+  OR saga OR sagas
+  OR "event sourcing"
+  OR CQRS
+  OR "command query responsibility segregation"
+  OR outbox
+  OR "two-phase commit"
+  OR "two phase commit"
+)
 
-Filters: Publication Date 2020-2026, Research Article, English
-
-Records returned: 193
+Records returned: 1,023 

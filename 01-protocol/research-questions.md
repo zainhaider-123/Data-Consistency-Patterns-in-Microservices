@@ -14,20 +14,13 @@ practice rather than compare interventions.
 
 ## Research Questions
 
-**RQ1.** What motivations and drivers (technical, organizational, economic)
-lead teams to consolidate a microservices architecture into a modular
-monolith?
+**RQ1.** What data consistency patterns are reported in microservices architectures, and what consistency guarantees do they provide?
 
-**RQ2.** What architectural patterns, decision frameworks, and migration
-strategies are used during the consolidation process?
+**RQ2.** What technical, organizational, and economic factors influence the selection of data consistency patterns in microservices?
 
-**RQ3.** What outcomes (quality attributes, cost, team productivity,
-operational complexity) are reported after consolidation, and how are they
-measured?
+**RQ3.** How are these patterns evaluated, and what benefits, limitations, and trade-offs are reported regarding consistency, performance, availability, scalability, and operational complexity?
 
-**RQ4.** What are the open challenges, limitations, and research gaps
-reported by primary studies in performing microservices-to-modular-monolith
-consolidation?
+**RQ4.** What open challenges and research gaps are reported in implementing and evaluating data consistency patterns in microservices?
 
 ## Justification of question framework choice
 

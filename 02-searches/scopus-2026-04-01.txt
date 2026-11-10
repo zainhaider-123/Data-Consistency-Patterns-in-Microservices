@@ -1,16 +1,29 @@
 Scopus Advanced Search
 
 TITLE-ABS-KEY(
-  (microservices OR microservice OR "service-oriented architecture")
-  AND
-  ("modular monolith" OR modulith OR consolidation
-   OR "service merging" OR "architectural refactoring" OR "macro-service")
-  AND
-  ("case study" OR empirical OR "experience report"
-   OR migration OR refactoring OR "interview study")
+  microservice OR microservices
+  OR "micro-service" OR "micro-services"
 )
-AND PUBYEAR > 2019 AND PUBYEAR < 2027
-AND (LIMIT-TO(LANGUAGE,"English"))
-AND (LIMIT-TO(DOCTYPE,"ar") OR LIMIT-TO(DOCTYPE,"cp"))
+AND
+TITLE-ABS-KEY(
+  consistency
+  OR "distributed transaction"
+  OR "distributed transactions"
+  OR "transaction management"
+  OR "data synchronization"
+  OR "data synchronisation"
+  OR saga OR sagas
+  OR "event sourcing"
+  OR CQRS
+  OR "command query responsibility segregation"
+  OR outbox
+  OR "two-phase commit"
+  OR "two phase commit"
+  OR "transactional messaging"
+)
+AND PUBYEAR > 2017
+AND PUBYEAR < 2027
+AND (DOCTYPE(ar) OR DOCTYPE(cp))
+AND LANGUAGE(english)
 
-Records returned: 847
+Records returned: 349 

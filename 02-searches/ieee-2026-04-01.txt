@@ -1,14 +1,29 @@
 IEEE Xplore Command Search
 Field tags: Document Title, Abstract, Author Keywords
 
-(("Abstract":microservices OR "Abstract":microservice)
- AND
- ("Abstract":"modular monolith" OR "Abstract":modulith
-  OR "Abstract":consolidation OR "Abstract":"architectural refactoring")
- AND
- ("Abstract":"case study" OR "Abstract":empirical
-  OR "Abstract":"experience report" OR "Abstract":migration))
+(
+  "All Metadata":microservice
+  OR "All Metadata":microservices
+  OR "All Metadata":"micro-service"
+  OR "All Metadata":"micro-services"
+)
+AND
+(
+  "All Metadata":consistency
+  OR "All Metadata":"distributed transaction"
+  OR "All Metadata":"distributed transactions"
+  OR "All Metadata":"transaction management"
+  OR "All Metadata":"data synchronization"
+  OR "All Metadata":"data synchronisation"
+  OR "All Metadata":saga
+  OR "All Metadata":sagas
+  OR "All Metadata":"event sourcing"
+  OR "All Metadata":CQRS
+  OR "All Metadata":"command query responsibility segregation"
+  OR "All Metadata":outbox
+  OR "All Metadata":"two-phase commit"
+  OR "All Metadata":"two phase commit"
+  OR "All Metadata":"transactional messaging"
+)
 
-Filters: 2020-2026, Conferences + Journals, English
-
-Records returned: 268
+Records returned: 347
